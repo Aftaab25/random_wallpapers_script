@@ -17,7 +17,7 @@ def change_wallpaper_from_folder(folder_path):
     wallpaper_path = os.path.join(folder_path, random_wallpaper)
 
     # Use the gsettings command to set the wallpaper
-    command = ["gsettings", "set", "org.gnome.desktop.background", "picture-uri", f"file://{wallpaper_path}"]
+    command = ["gsettings", "set", "org.gnome.desktop.background", "picture-uri-dark", f"file://{wallpaper_path}"]
 
     try:
         subprocess.run(command, check=True)
